@@ -1,0 +1,32 @@
+{
+  "catalog": [
+    {
+      "name": "Flatten",
+      "type": "group",
+      "items": [
+        {
+          "name": "WMS no-flatten",
+          "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_GHI_Mean/MapServer/WMSServer",
+          "type": "wms-getCapabilities"
+        },
+        {
+          "name": "WMS flatten",
+          "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_GHI_Mean/MapServer/WMSServer",
+          "type": "wms-getCapabilities",
+          "flatten": true
+        },
+        {
+          "name": "Esri no-flatten",
+          "type": "esri-mapServer-group",
+          "url": "http://www.ga.gov.au/gisimg/rest/services/energy/Solar_Energy_DNI_Mean/MapServer"
+        },
+        {
+          "name": "Esri flatten",
+          "type": "esri-mapServer-group",
+          "url": "http://www.ga.gov.au/gisimg/rest/services/energy/Solar_Energy_DNI_Mean/MapServer",
+          "flatten": true
+        }
+      ]
+    }
+  ]
+}
