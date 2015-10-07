@@ -24,7 +24,7 @@
           "name": "Esri flatten",
           "type": "esri-mapServer-group",
           "url": "http://www.ga.gov.au/gisimg/rest/services/energy/Solar_Energy_DNI_Mean/MapServer",
-          "flatten": true
+          "groupBy": "none"
         }
       ]
     }
