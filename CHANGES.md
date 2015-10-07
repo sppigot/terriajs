@@ -14,6 +14,7 @@ Change Log
 * Added the `attribution` property to catalog items.  The attribution is displayed on the map when the catalog item is enabled.
 * Remove an unnecessary instance of the Cesium InfoBox class when viewing in 2D
 * Fixed a bug that prevented `AbsIttCatalogGroup` from successfully loading its list of catalog items.
+* Port the "flatten" property from "wms-getCapabilities" so that it also works for "esri-mapServer-group"
 
 ### 1.0.43
 
