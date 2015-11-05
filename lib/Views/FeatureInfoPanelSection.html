@@ -10,6 +10,12 @@
         <span class="feature-info-panel-section-label" data-bind="text: name"></span>
     </div>
     <div class="feature-info-panel-section-content-wrapper" data-bind ="css:feature == terria.selectedFeature ?'open': 'closed'">
-    <div class="feature-info-panel-section-content" data-bind="markdown: info, css: { 'feature-info-panel-section-content-white-background': useWhiteBackground }"></div>
+        <!-- ko if: feature == terria.selectedFeature -->
+        <div class="feature-info-panel-section-content" data-bind="markdown: info, css: { 'feature-info-panel-section-content-white-background': useWhiteBackground }"></div>
+        <div class="feature-info-panel-section-content-hidden" data-bind="markdown: info"></div>
+
+        <!-- /ko -->
     </div>
 </div>
+
+

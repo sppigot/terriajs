@@ -38,18 +38,21 @@
     max-width: 600px; // adjusted dynamically in FeatureInfoPanelViewModel.js
     position: absolute;
     box-shadow: @panel-box-shadow;
+
+    -webkit-transition: width @explorer-panel-close-animation-length ease-out;
+    -moz-transition: width @explorer-panel-close-animation-length ease-out;
+    -ms-transition: width @explorer-panel-close-animation-length ease-out;
+    -o-transition: width @explorer-panel-close-animation-length ease-out;
+    transition: width @explorer-panel-close-animation-length ease-out;
+
 }
 
 .feature-info-panel-section-content-wrapper{
     max-height: 0;
     max-width: 0;
     overflow: hidden;
-    table{
-        width: 100%;
-    }
     &.closed{
-        max-height: 0;
-        max-width: 100%;
+        width: 0;
         overflow: hidden;
     }
     &.open{
@@ -58,6 +61,17 @@
         max-width: 100%;
     }
 }
+
+.feature-info-panel-section-content-hidden{
+    position: fixed;
+    visibility: hidden;
+    width: auto;
+    top: 0;
+    left: 0;
+    background: yellow;
+}
+
+
 
 .feature-info-panel-header {
     font-size: 0.9em;
@@ -71,7 +85,6 @@
 .feature-info-panel-body {
     .opaque-to-input;
 }
-//data-bind="style: { 'max-width': maxWidth + 'px' }
 
 .feature-info-panel-sections {
     overflow-y: auto;
